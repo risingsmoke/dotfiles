@@ -9,9 +9,8 @@ Simple and Elegant Configuration for zsh
             curl -L git.io/antigen > antigen.zsh
             mv antigen.zsh $HOME/.antigen.zsh
          ```
-
 * clone the repo
 ```bash
-git clone https://github.com/risingsmoke/dotfiles
+git clone https://github.com/risingsmoke/dotfiles $HOME
 ```
 
