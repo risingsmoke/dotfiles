@@ -17,4 +17,5 @@ Simple and Elegant Configuration for zsh
     ```bash
     echo "source ~/.config/dotfiles/.zshrc" >> ~/.zshrc 
     ```
+    * Open New Tab to load the changes
 
