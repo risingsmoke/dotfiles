@@ -11,6 +11,10 @@ Simple and Elegant Configuration for zsh
      ```
     * clone the repo
     ```bash
-    git clone https://github.com/risingsmoke/dotfiles $HOME
+    git clone https://github.com/risingsmoke/dotfiles ~/.config
+    ```
+    * Load the dotfile in ~/.zshrc
+    ```bash
+    echo "source ~/.config/dotfiles/.zshrc" >> ~/.zshrc 
     ```
 

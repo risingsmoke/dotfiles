@@ -16,7 +16,11 @@ antigen bundle lein
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle clvv/fasd fasd
+# antigen bundle clvv/fasd fasd
+
+# Install fasd, https://github.com/clvv/fasd/
+# load fasd for faster directory switching
+eval "$(fasd --init auto)"
 
 # Theme
 antigen theme denysdovhan/spaceship-prompt
