@@ -1,6 +1,12 @@
 ## dotfiles
 Simple configuration for zsh on MAC
+
+Uses [starship](https://github.com/starship/starship)
 ### Installation
+* Install starship
+    ```bash
+    curl -fsSL https://starship.rs/install.sh | bash
+    ```
 * Setup script for dependencies
     ```bash
       mkdir .zsh $HOME/bin
@@ -20,5 +26,5 @@ Simple configuration for zsh on MAC
       pip install virtualenv
       virtualenv --python=python38 py38env
     ```
+* Copy .zshrc contents to your .zshrc file. (Remove/Add options as needed)
 * Open New Tab to load the changes
-
