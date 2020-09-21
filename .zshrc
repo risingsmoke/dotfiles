@@ -1,30 +1,37 @@
-# terminal
-export TERM="xterm-256color"
+# Using GNU utils
+export PATH=/opt/local/libexec/gnubin/:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
-# Config Created by fallingsnow for 5.6.2 zsh
-# install antigen
-# https://github.com/zsh-users/antigen
-# load antigen
-source $HOME/.antigen.zsh
+source $HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# Use oh-my-zsh
-antigen use oh-my-zsh
+fpath=($HOME/.zsh/zsh-completions/src $fpath)
 
-# Load plugins
-antigen bundle git
-antigen bundle lein
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zsh-users/zsh-syntax-highlighting
-# antigen bundle clvv/fasd fasd
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt INC_APPEND_HISTORY_TIME
 
-# Install fasd, https://github.com/clvv/fasd/
-# load fasd for faster directory switching
+# Save only one command if 2 common are same and consistent
+setopt HIST_IGNORE_DUPS
+
+# Add timestamp foreach entry
+setopt EXTENDED_HISTORY
+
+# Enable starship
+eval "$(starship init zsh)"
+
+# Dir jumping
 eval "$(fasd --init auto)"
 
-# Theme
-antigen theme denysdovhan/spaceship-prompt
+## SHORTCUTS
+# Skip forward/back a word with opt-arrow
+bindkey '[C' forward-word
+bindkey '[D' backward-word
 
-# apply changes
-antigen apply
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
+# User bin
+export PATH=$HOME/bin:$PATH
